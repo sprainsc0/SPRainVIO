@@ -1,0 +1,50 @@
+msckf_node:
+  ros__parameters:
+    cuda : true
+    ext_att : true
+    grid_row : 4
+    grid_col : 5
+    grid_min_feature_num : 2
+    grid_max_feature_num : 3
+    pyramid_levels : 3
+    patch_size : 15
+    fast_threshold : 10
+    max_iteration : 30
+    track_precision : 0.01
+    ransac_threshold : 3.0
+    stereo_threshold : 5.0
+
+    imu_topic : /fmu/imu/out
+
+    vio_topic : /fmu/sensor_vio/in
+
+    cam0_topic : /camera/infra1/image_rect_raw
+    cam1_topic : /camera/infra2/image_rect_raw
+
+    cam0_model : pinhole
+    cam1_model : pinhole
+    
+    cam0_distortion_model : radtan
+    cam1_distortion_model : radtan
+
+    cam0_resolution : [640, 480]
+    cam1_resolution : [640, 480]
+
+    cam0_intrinsics : [385.27171482239345, 384.9941874091073, 318.83698211850646, 243.4593534596924]
+
+    cam1_intrinsics : [384.9201427696621, 384.79851966489474, 318.65068482897, 242.1198233583061]
+
+    cam0_coeffs : [0.0027531962513923872, -0.0035631071541026944, 0.0005587574231388822, -0.00019451426545505745]
+
+    cam1_coeffs : [-0.0019938511133681396, 0.003336991214578105, -0.0015626856864680695, -0.0006601656568304053]
+
+    T_imu_cam : [0.00430537, 0.99995896, 0.00797079, 0.02260417,
+                -0.0074694, -0.00793849, 0.99994059, -0.04088319,
+                0.99996284, -0.00436465, 0.00743491, -0.01976198,
+                0.0, 0.0, 0.0, 1.0]
+
+    T_cn_cnm1 : [0.9999999496494868, 6.397425222607529e-06, -0.0003172697546565919, -0.05009063284922009,
+                -5.053565363379861e-06, 0.9999910301276496, 0.004235521066431848, 0.0002624333062199249,
+                0.00031729400521669315, -0.0042355192498277445, 0.9999909798099176, -0.00025219575714770096,
+                0.0, 0.0, 0.0, 1.0]
+
